@@ -1,0 +1,57 @@
+//Shows.js
+
+
+import React from 'react';
+var createClass=require('create-react-class');
+
+class Title extends React.Component{
+    render(){
+        return(
+            <h1>Title:Friends</h1>
+        );
+    }
+}
+class Image extends React.Component{
+    render(){
+        return(
+            <img src="https://www.movieposter.com/posters/archive/main/52/MPW-26106" alt="Show Poster"  style={{height:400,width:400}}></img>
+        );
+    }
+}
+class ShowInfo extends React.Component{
+    render(){
+        return(
+            <div>
+            <p> plot: Follows the personal and professional lives of six 20 to 30-something-year-old friends living in Manhattan.</p>
+            <h5>imdbRating: 9.0</h5>
+            </div>
+        );
+    }
+}
+class Show extends React.Component{
+    render(){
+        return(
+            <div className="text-center">
+            <Title />
+            <Image />
+            <ShowInfo />
+            </div>
+        );
+    }
+}
+
+export default Show;
+
+
+//Index.js
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+import Show from './Shows';
+
+
+ReactDOM.render(
+    <Show />,
+    document.getElementById('root')
+);
+
